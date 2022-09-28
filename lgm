@@ -1,0 +1,185 @@
+#include <stdio.h>
+
+
+int main()
+
+   {
+
+   #define POUND 0.85
+   #define RUPEES 0.013
+   #define YEN 127
+   #define BTC 2338193.24
+   #define ETH 1,39,307.73
+   #define DOGE 6.17
+
+   int menu_choice;
+   float local_amount, remote_amount;
+
+   printf("1. Britain\n");
+   printf("2. India\n");
+   printf("3. Japan\n");
+   printf("4. CRYPTO\n");
+   printf("5. Exit Program\n\n");
+
+   
+
+   printf("Please Enter Your Country Selection From The Menu: \t");
+   scanf("%d",&menu_choice);
+
+   if (menu_choice == 1)
+   {
+      printf("\n\nDo you wish to convert from:\n\n");
+      printf("1. Euro to Pound(Sterling)\n");
+      printf("2. Pound(Sterling) to Euro\n\n");
+      printf("Please Enter Your Choice From The Menu: \t");
+      scanf("%d",&menu_choice);
+
+      if (menu_choice == 1)
+      {
+         printf("\n\nEuro to Pound(Sterling):\n\n");
+
+         printf("Please Enter Euro Amount to be Converted: \t");
+         scanf("%f",&local_amount);
+
+         remote_amount = local_amount * POUND;
+
+         printf("\n%f Euro is equal to %f Pound",local_amount, remote_amount);
+
+         menu_choice = 0;
+
+      }
+
+      if (menu_choice == 2)
+      {
+
+         printf("\n\nPound(Sterling) to Euro:\n\n");
+
+         printf("Please Enter Pound(Sterling) Amount to be Converted: \t");
+         scanf("%f",&local_amount);
+
+         remote_amount = local_amount / POUND;
+
+         printf("\n%f Pound is equal to %f Euro",local_amount, remote_amount);
+
+         menu_choice = 0;
+
+      }
+
+   }
+
+   if (menu_choice == 2)
+   {
+      
+    printf("\n\nDo you wish to convert from:\n\n");
+    printf("1. Rupees to Dollar\n");
+    printf("2. Dollar to Rupees\n\n");
+    printf("Please Enter Your Choice From The Menu: \t");
+    scanf("%d",&menu_choice);
+
+      if (menu_choice == 1)
+      {
+         printf("\n\n Rupees to Dollar:\n\n");
+
+         printf("Please Enter Rupees Amount to be Converted: \t");
+         scanf("%f",&local_amount);
+
+         remote_amount = local_amount * RUPEES;
+
+         printf("\n%f Rupees is equal to %f Dollars\n",local_amount, remote_amount);
+
+         menu_choice = 0;
+
+      }
+
+      if (menu_choice == 2)
+      {
+
+         printf("\n\nDollar to Rupees:\n\n");
+
+         printf("Please Enter Dollar Amount to be Converted: \t");
+         scanf("%f",&local_amount);
+
+         remote_amount = local_amount / RUPEES;
+
+         printf("\n%f Dollars is equal to %f Rupees\n",local_amount, remote_amount);
+
+         menu_choice = 0;
+
+      }
+   }
+
+   if (menu_choice == 3)
+   {
+      printf("3. We are Working on Japan Currency \n");
+   }
+
+   if (menu_choice == 4)
+   {
+       {
+      
+      printf("\n\nDo you wish to convert To Rupees from:\n\n");
+      printf("1. BITCOIN\n");
+      printf("2. ETHERIUM\n");
+      printf("3. DOGECOIN\n\n");
+      printf("Please Enter Your Choice From The Menu: \t");
+      scanf("%d",&menu_choice);
+
+      if (menu_choice == 1)
+      {
+         printf("\n\n BITCOIN TO RUPEES \n\n");
+
+         printf("Please Enter  BITCOINS to be Converted: ");
+         scanf("%f",&local_amount);
+
+         remote_amount = local_amount * BTC;
+
+         printf("\n%f BITCOIN is equal to %f RUPEES\n",local_amount, remote_amount);
+
+         menu_choice = 0;
+
+      }
+
+      if (menu_choice == 2)
+      {
+
+         printf("\n\nETHERIUM to Rupees:\n\n");
+
+         printf("Please Enter ETHERIUM COINS to be Converted: \t");
+         scanf("%f",&local_amount);
+
+         remote_amount = local_amount * ETH;
+
+         printf("\n%f ETHERIUM is equal to %f Rupees\n",local_amount, remote_amount);
+
+         menu_choice = 0;
+
+      }
+      
+      if (menu_choice == 3)
+      {
+
+         printf("\n\nDOGECOIN to Rupees:\n\n");
+
+         printf("Please Enter DOGE COIN to be Converted: \t");
+         scanf("%f",&local_amount);
+
+         remote_amount = local_amount * DOGE;
+
+         printf("\n%f DOGECOIN is equal to %f Rupees\n",local_amount, remote_amount);
+
+         menu_choice = 0;
+
+      }
+    }
+
+      
+
+   if (menu_choice == 5)
+   {
+      printf("5.Thank You \n");
+   }
+
+   return 0;
+
+   }
+}
